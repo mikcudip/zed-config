@@ -1022,6 +1022,21 @@
       "ctrl-r": "diagnostics::ToggleDiagnosticsRefresh"
     }
   },
+  {
+    "context": "EmptyPane || SharedScreen",
+    "bindings": {
+      "e": "project_panel::ToggleFocus"
+    }
+  },
+  {
+    "context": "Editor && VimControl && !VimWaiting && !menu",
+    "bindings": {
+      "space e e": "tab_switcher::Toggle",
+      "space e f": "tab_switcher::ToggleAll",
+      "space e a": "file_finder::Toggle",
+      "space e p": "projects::OpenRecent"
+    }
+  },
 
   // Vim Keybindings
   // Custom Mik
