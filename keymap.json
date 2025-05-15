@@ -587,11 +587,19 @@
       "ctrl-alt-r": "task::Rerun",
       "alt-t": "task::Rerun",
       "alt-shift-t": "task::Spawn",
-      "alt-shift-r": ["task::Spawn", { "reveal_target": "center" }]
+      "alt-shift-r": ["task::Spawn", { "reveal_target": "center" }],
       // also possible to spawn tasks by name:
       // "foo-bar": ["task::Spawn", { "task_name": "MyTask", "reveal_target": "dock" }]
       // or by tag:
       // "foo-bar": ["task::Spawn", { "task_tag": "MyTag" }],
+
+      // Custom Mik
+      "ctrl-0": "workspace::ToggleCenteredLayout",
+      "ctrl-1": "workspace::CloseAllDocks",
+      "ctrl-2": "project_panel::ToggleFocus",
+      "ctrl-3": "git_panel::ToggleFocus",
+      "ctrl-4": "outline_panel::ToggleFocus",
+      "ctrl-5": "agent::ToggleFocus"
     }
   },
   {
@@ -627,7 +635,17 @@
       "ctrl-k up": "pane::SplitUp",
       "ctrl-k down": "pane::SplitDown",
       "ctrl-k left": "pane::SplitLeft",
-      "ctrl-k right": "pane::SplitRight"
+      "ctrl-k right": "pane::SplitRight",
+
+      // Custom Mik
+      "ctrl-k k": "pane::SplitUp",
+      "ctrl-k j": "pane::SplitDown",
+      "ctrl-k h": "pane::SplitLeft",
+      "ctrl-k l": "pane::SplitRight",
+      "ctrl-w h": "workspace::ActivatePaneLeft",
+      "ctrl-w j": "workspace::ActivatePaneDown",
+      "ctrl-w k": "workspace::ActivatePaneUp",
+      "ctrl-w l": "workspace::ActivatePaneRight"
     }
   },
   // Bindings that should be unified with bindings for more general actions
@@ -788,7 +806,23 @@
   {
     "context": "ProjectPanel && not_editing",
     "bindings": {
-      "space": "project_panel::Open"
+      "space": "project_panel::Open",
+
+      // Custom Mik
+      "a": "project_panel::NewFile",
+      "shift-a": "project_panel::NewDirectory",
+      "r": "project_panel::Rename",
+      "d": "project_panel::Trash",
+      "shift-d": "project_panel::Delete",
+      "y": "project_panel::Copy",
+      "x": "project_panel::Cut",
+      "p": "project_panel::Paste",
+      "c": "project_panel::CollapseAllEntries",
+      "f": "project_panel::OpenWithSystem",
+      "u": "workspace::CopyPath",
+      "i": "workspace::CopyRelativePath",
+      "l": "project_panel::OpenPermanent",
+      "h": "project_panel::ToggleFocus"
     }
   },
   {
@@ -986,6 +1020,38 @@
     "use_key_equivalents": true,
     "bindings": {
       "ctrl-r": "diagnostics::ToggleDiagnosticsRefresh"
+    }
+  },
+
+  // Vim Keybindings
+  // Custom Mik
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      "alt-h": "vim::Left",
+      "alt-l": "vim::Right",
+      "alt-j": "vim::Down",
+      "alt-k": "vim::Up"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == normal && !VimWaiting && !menu",
+    "bindings": {
+      "space h": "pane::ActivatePreviousItem",
+      "space l": "pane::ActivateNextItem",
+      "space q": "pane::CloseActiveItem",
+      "space f d": "editor::Format",
+      "space c d": "editor::ToggleInlineDiagnostics"
+    }
+  },
+  {
+    "context": "Editor && (vim_mode == normal || vim_mode == visual) && !VimkkWaiting && !menu",
+    "bindings": {
+      "c c": "editor::ToggleComments",
+      "c a": "editor::ToggleCodeActions",
+      "c i": "editor::Hover",
+      "o p": "outline::Toggle",
+      "ctrl-.": "editor::ShowCompletions"
     }
   }
 ]
