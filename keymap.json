@@ -1026,6 +1026,18 @@
   // Vim Keybindings
   // Custom Mik
   {
+    "context": "VimControl && !menu",
+    "bindings": {
+      "escape": "vim::SwitchToNormalMode",
+      "ctrl-[": "vim::SwitchToNormalMode",
+      "v": "vim::ToggleVisual",
+      "shift-v": "vim::ToggleVisualLine",
+      "ctrl-g": "vim::ShowLocation",
+      "ctrl-v": "vim::ToggleVisualBlock",
+      "ctrl-q": "vim::ToggleVisualBlock"
+    }
+  },
+  {
     "context": "Editor && vim_mode == insert",
     "bindings": {
       "alt-h": "vim::Left",
@@ -1040,17 +1052,17 @@
       "space h": "pane::ActivatePreviousItem",
       "space l": "pane::ActivateNextItem",
       "space q": "pane::CloseActiveItem",
-      "space f d": "editor::Format",
-      "space c d": "editor::ToggleInlineDiagnostics"
+      "space f d": "editor::Format"
     }
   },
   {
     "context": "Editor && (vim_mode == normal || vim_mode == visual) && !VimkkWaiting && !menu",
     "bindings": {
-      "c c": "editor::ToggleComments",
-      "c a": "editor::ToggleCodeActions",
-      "c i": "editor::Hover",
-      "o p": "outline::Toggle",
+      "space c a": "editor::ToggleCodeActions",
+      "space c c": "editor::ToggleComments",
+      "space c d": "editor::ToggleInlineDiagnostics",
+      "space c i": "editor::Hover",
+      "space o p": "outline::Toggle",
       "ctrl-.": "editor::ShowCompletions"
     }
   }
