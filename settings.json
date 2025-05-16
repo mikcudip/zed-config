@@ -23,9 +23,6 @@
   "hide_mouse": "on_typing_and_movement",
   // Will be triggered manually with `ctrl-x ctrl-c`.
   "show_edit_predictions": false,
-  "inlay_hints": {
-    "enabled": true
-  },
   "theme": "Nord",
   "telemetry": {
     "metrics": false,
@@ -74,5 +71,6 @@
     }
   },
   "wrap_guides": [90],
-  "show_wrap_guides": true
+  "show_wrap_guides": true,
+  "unnecessary_code_fade": 0.6
 }
