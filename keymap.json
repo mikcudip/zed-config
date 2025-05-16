@@ -1048,8 +1048,8 @@
       "v": "vim::ToggleVisual",
       "shift-v": "vim::ToggleVisualLine",
       "ctrl-g": "vim::ShowLocation",
-      "ctrl-v": "vim::ToggleVisualBlock",
-      "ctrl-q": "vim::ToggleVisualBlock"
+      "ctrl-q": "vim::ToggleVisualBlock",
+      "ctrl-j": "workspace::ToggleBottomDock"
     }
   },
   {
@@ -1058,7 +1058,8 @@
       "alt-h": "vim::Left",
       "alt-l": "vim::Right",
       "alt-j": "vim::Down",
-      "alt-k": "vim::Up"
+      "alt-k": "vim::Up",
+      "j k": "vim::SwitchToNormalMode"
     }
   },
   {

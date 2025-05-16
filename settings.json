@@ -57,6 +57,7 @@
   "preview_tabs": {
     "enabled": false
   },
+  "tab_size": 2,
   "git": {
     "git_gutter": "tracked_files",
     "inline_blame": {
