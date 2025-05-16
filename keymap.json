@@ -1028,15 +1028,6 @@
       "e": "project_panel::ToggleFocus"
     }
   },
-  {
-    "context": "Editor && VimControl && !VimWaiting && !menu",
-    "bindings": {
-      "space e e": "tab_switcher::Toggle",
-      "space e f": "tab_switcher::ToggleAll",
-      "space e a": "file_finder::Toggle",
-      "space e p": "projects::OpenRecent"
-    }
-  },
 
   // Vim Keybindings
   // Custom Mik
@@ -1050,6 +1041,15 @@
       "ctrl-g": "vim::ShowLocation",
       "ctrl-q": "vim::ToggleVisualBlock",
       "ctrl-j": "workspace::ToggleBottomDock"
+    }
+  },
+  {
+    "context": "Editor && VimControl && !VimWaiting && !menu",
+    "bindings": {
+      "space e e": "tab_switcher::Toggle",
+      "space e t": "tab_switcher::ToggleAll",
+      "space e f": "file_finder::Toggle",
+      "space e p": "projects::OpenRecent"
     }
   },
   {
