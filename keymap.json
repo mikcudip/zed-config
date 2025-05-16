@@ -136,7 +136,10 @@
       "f9": "editor::ToggleBreakpoint",
       "shift-f9": "editor::EditLogBreakpoint",
       "ctrl-shift-backspace": "editor::GoToPreviousChange",
-      "ctrl-shift-alt-backspace": "editor::GoToNextChange"
+      "ctrl-shift-alt-backspace": "editor::GoToNextChange",
+
+      // Custom Mik
+      "alt-shift-space": "workspace::ToggleZoom"
     }
   },
   {
