@@ -1081,7 +1081,9 @@
       "space c c": "editor::ToggleComments",
       "space c d": "editor::ToggleInlineDiagnostics",
       "space c i": "editor::Hover",
-      "space o p": "outline::Toggle",
+      "space c s": "outline::Toggle",
+      "space g b": "git::Blame",
+      "space g d": "editor::ToggleSelectedDiffHunks",
       "ctrl-.": "editor::ShowCompletions"
     }
   }
