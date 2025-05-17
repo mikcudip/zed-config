@@ -1,1 +1,53 @@
-
+[
+  {
+    "label": "Npm Dev",
+    "command": "npm run $script",
+    "env": { "script": "dev" },
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+    "reveal": "always",
+    "hide": "never",
+    "shell": "system",
+    "show_summary": true,
+    "show_output": true,
+    "tags": []
+  },
+  {
+    "label": "Npm Build",
+    "command": "npm run $script",
+    "env": { "script": "build" },
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+    "reveal": "always",
+    "hide": "never",
+    "shell": "system",
+    "show_summary": true,
+    "show_output": true,
+    "tags": []
+  },
+  {
+    "label": "Maven Vanilla",
+    "command": "mvn clean compile exec:java",
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+    "reveal": "always",
+    "hide": "never",
+    "shell": "system",
+    "show_summary": true,
+    "show_output": true,
+    "tags": []
+  },
+  {
+    "label": "Maven Spring",
+    "command": "mvn clean && mvn spring-boot:run",
+    "env": { "script": "build" },
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+    "reveal": "always",
+    "hide": "never",
+    "shell": "system",
+    "show_summary": true,
+    "show_output": true,
+    "tags": []
+  }
+]

@@ -1,9 +1,6 @@
 {
   "agent": {
-    "default_model": {
-      "provider": "google",
-      "model": "gemini-1.5-flash"
-    },
+    "default_model": { "provider": "google", "model": "gemini-1.5-flash" },
     "version": "2"
   },
   "project_panel": {
@@ -27,13 +24,14 @@
     "diagnostics": false
   },
   "vim_mode": true,
-  "ui_font_size": 14,
-  "buffer_font_size": 14,
+  "ui_font_size": 12,
+  "buffer_font_size": 12,
+  "agent_font_size": 12,
   "terminal": {
     "font_family": "JetBrains Mono",
     "font_size": 12,
     "line_height": {
-      "custom": 1.7
+      "custom": 1.5
     }
   },
   "cursor_blink": false,
@@ -50,7 +48,6 @@
     "breakpoints": false,
     "code_actions": false
   },
-  // Rainbow indentation
   "indent_guides": {
     "enabled": true,
     "coloring": "indent_aware"

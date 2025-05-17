@@ -46,7 +46,10 @@
     "context": "Picker || menu",
     "bindings": {
       "up": "menu::SelectPrevious",
-      "down": "menu::SelectNext"
+      "down": "menu::SelectNext",
+
+      // Custom Mik
+      "ctrl-ñ": "menu::Confirm"
     }
   },
   {
@@ -1028,7 +1031,8 @@
   {
     "context": "EmptyPane || SharedScreen",
     "bindings": {
-      "e": "project_panel::ToggleFocus"
+      "e": "project_panel::ToggleFocus",
+      "f": "file_finder::Toggle"
     }
   },
 
@@ -1037,12 +1041,7 @@
   {
     "context": "VimControl && !menu",
     "bindings": {
-      "escape": "vim::SwitchToNormalMode",
-      "ctrl-[": "vim::SwitchToNormalMode",
-      "v": "vim::ToggleVisual",
-      "shift-v": "vim::ToggleVisualLine",
-      "ctrl-g": "vim::ShowLocation",
-      "ctrl-q": "vim::ToggleVisualBlock",
+      "ctrl-q": "vim::SwitchToVisualBlockMode",
       "ctrl-j": "workspace::ToggleBottomDock"
     }
   },
