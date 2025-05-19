@@ -1,32 +1,54 @@
 {
+  // === AGENTE (IA) ===
   "agent": {
-    "default_model": { "provider": "google", "model": "gemini-1.5-flash" },
+    "default_model": {
+      "provider": "google",
+      "model": "gemini-1.5-flash"
+    },
     "version": "2"
   },
-  "project_panel": {
-    "dock": "right"
+
+  // === APARIENCIA Y UI ===
+  "theme": "Nord",
+  "ui_font_family": "JetBrains Mono",
+  "buffer_font_family": "JetBrains Mono",
+  "ui_font_size": 12,
+  "buffer_font_size": 12,
+  "agent_font_size": 12,
+  "cursor_blink": false,
+  "hide_mouse": "on_typing_and_movement",
+  "scrollbar": {
+    "show": "never"
   },
   "toolbar": {
     "breadcrumbs": true,
     "quick_actions": false,
     "selections_menu": false
   },
-  "ui_font_family": "JetBrains Mono",
-  "buffer_font_family": "JetBrains Mono",
-  "features": {
-    "edit_prediction_provider": "zed",
-    "copilot": false
+  "tab_bar": {
+    "show": true
   },
-  "hide_mouse": "on_typing_and_movement",
-  "theme": "Nord",
-  "telemetry": {
-    "metrics": false,
-    "diagnostics": false
+  "tabs": {
+    "show_diagnostics": "errors"
   },
-  "vim_mode": true,
-  "ui_font_size": 12,
-  "buffer_font_size": 12,
-  "agent_font_size": 12,
+  "centered_layout": {
+    "left_padding": 0.15,
+    "right_padding": 0.15
+  },
+  "file_finder": {
+    "modal_width": "medium"
+  },
+
+  // === TIPOGRAFÍA Y GUÍAS ===
+  "wrap_guides": [90],
+  "show_wrap_guides": true,
+  "indent_guides": {
+    "enabled": true,
+    "coloring": "indent_aware"
+  },
+  "unnecessary_code_fade": 0.6,
+
+  // === TERMINAL ===
   "terminal": {
     "font_family": "JetBrains Mono",
     "font_size": 12,
@@ -34,44 +56,137 @@
       "custom": 1.5
     }
   },
-  "cursor_blink": false,
+
+  // === VIM MODE ===
+  "vim_mode": true,
+  "vim": {
+    "use_system_clipboard": "always",
+    "toggle_relative_line_numbers": true,
+    "enable_vim_sneak": true
+  },
   "relative_line_numbers": true,
-  "tab_bar": {
-    "show": true
+
+  // === FUNCIONALIDAD ===
+  "features": {
+    "edit_prediction_provider": "zed",
+    "copilot": false
   },
-  "scrollbar": {
-    "show": "never"
+
+  // === TELEMETRÍA ===
+  "telemetry": {
+    "metrics": false,
+    "diagnostics": false
   },
-  "gutter": {
-    "folds": false,
-    "runnables": false,
-    "breakpoints": false,
-    "code_actions": false
-  },
-  "indent_guides": {
-    "enabled": true,
-    "coloring": "indent_aware"
-  },
-  "preview_tabs": {
-    "enabled": false
-  },
-  "tab_size": 2,
+
+  // === GIT ===
   "git": {
     "git_gutter": "tracked_files",
     "inline_blame": {
       "enabled": true
     }
   },
-  "vim": {
-    "use_system_clipboard": "always",
-    "toggle_relative_line_numbers": true
+  "git_panel": {
+    "dock": "right"
   },
-  "languages": {
-    "LaTeX": {
-      "soft_wrap": "preferred_line_length"
+
+  // === PANELES (DOCKS) ===
+  "project_panel": {
+    "button": true,
+    "dock": "right",
+    "git_status": true
+  },
+  "outline_panel": {
+    "dock": "right"
+  },
+  "collaboration_panel": {
+    "dock": "left"
+  },
+  "notification_panel": {
+    "dock": "left"
+  },
+  "chat_panel": {
+    "dock": "left"
+  },
+
+  // === GUTTER / COSAS DEL BORDE ===
+  "gutter": {
+    "folds": false,
+    "runnables": false,
+    "breakpoints": false,
+    "code_actions": false
+  },
+
+  // === TABS Y ARCHIVOS ===
+  "preview_tabs": {
+    "enabled": false
+  },
+  "tab_size": 2,
+
+  // === FILE TYPES Y SINTAXIS ===
+  "file_types": {
+    "Dockerfile": ["Dockerfile", "Dockerfile.*"],
+    "JSON": ["json", "jsonc", "*.code-snippets"]
+  },
+
+  // === EXCLUSIONES DE ESCANEO DE ARCHIVOS ===
+  "file_scan_exclusions": [
+    "**/.git",
+    "**/.svn",
+    "**/.hg",
+    "**/CVS",
+    "**/.DS_Store",
+    "**/Thumbs.db",
+    "**/.classpath",
+    "**/.settings",
+    "**/out",
+    "**/dist",
+    "**/.husky",
+    "**/.turbo",
+    "**/.vscode-test",
+    "**/.vscode",
+    "**/.next",
+    "**/.storybook",
+    "**/.tap",
+    "**/.nyc_output",
+    "**/report",
+    "**/node_modules"
+  ],
+
+  // === INLAY HINTS ===
+  "inlay_hints": {
+    "enabled": true
+  },
+
+  // === LSP GENERAL Y POR LENGUAJE ===
+  "lsp": {
+    "tailwindcss-language-server": {
+      "settings": {
+        "classAttributes": ["class", "className", "ngClass", "styles"]
+      }
     }
   },
-  "wrap_guides": [90],
-  "show_wrap_guides": true,
-  "unnecessary_code_fade": 0.6
+
+  "languages": {
+    "TypeScript": {
+      "inlay_hints": {
+        "enabled": true,
+        "show_parameter_hints": false,
+        "show_other_hints": true,
+        "show_type_hints": true
+      }
+    },
+    "Python": {
+      "format_on_save": {
+        "language_server": {
+          "name": "ruff"
+        }
+      },
+      "formatter": {
+        "language_server": {
+          "name": "ruff"
+        }
+      },
+      "language_servers": ["pyright", "ruff"]
+    }
+  }
 }
