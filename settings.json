@@ -1,4 +1,6 @@
 {
+  "base_keymap": null,
+
   // === AGENTE (IA) ===
   "agent": {
     "default_model": {

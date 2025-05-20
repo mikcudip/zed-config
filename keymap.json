@@ -57,6 +57,10 @@
       "space .": "editor::ToggleCodeActions",
       "space c r": "editor::Rename",
 
+      // Acciones de buffer (LSP)
+      "space h": "pane::ActivatePreviousItem",
+      "space l": "pane::ActivateNextItem",
+
       // Go to...
       "g d": "editor::GoToDefinition",
       "g D": "editor::GoToDefinitionSplit",
@@ -131,8 +135,11 @@
   {
     "context": "Editor && vim_mode == insert && !menu",
     "bindings": {
-      "j j": "vim::NormalBefore",
-      "j k": "vim::NormalBefore"
+      "j k": "vim::NormalBefore",
+      "alt-h": "vim::Left",
+      "alt-l": "vim::Right",
+      "alt-j": "vim::Down",
+      "alt-k": "vim::Up"
     }
   },
 
