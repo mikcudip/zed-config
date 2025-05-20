@@ -47,10 +47,10 @@
       "ctrl-j": "workspace::ActivatePaneDown",
 
       // Split de panes
-      "ctrl-k k": "pane::SplitUp",
-      "ctrl-k j": "pane::SplitDown",
-      "ctrl-k h": "pane::SplitLeft",
-      "ctrl-k l": "pane::SplitRight",
+      "space s k": "pane::SplitUp",
+      "space s j": "pane::SplitDown",
+      "space s h": "pane::SplitLeft",
+      "space s l": "pane::SplitRight",
 
       // Acciones del lenguaje (LSP)
       "space c a": "editor::ToggleCodeActions",
@@ -119,7 +119,8 @@
     "context": "EmptyPane || SharedScreen",
     "bindings": {
       "space space": "file_finder::Toggle",
-      "space f p": "projects::OpenRecent"
+      "space f p": "projects::OpenRecent",
+      "space e": "project_panel::ToggleFocus"
     }
   },
 
@@ -250,16 +251,14 @@
       "S": ["vim::PushSneakBackward", {}]
     }
   }
-  // ----- Subword motion (desactivado porque está medio roto por ahora) -----
-  /*
-  {
-    "context": "VimControl && !menu",
-    "bindings": {
-      "w": "vim::NextSubwordStart",
-      "b": "vim::PreviousSubwordStart",
-      "e": "vim::NextSubwordEnd",
-      "g e": "vim::PreviousSubwordEnd"
-    }
-  }
-  */
+  // // ----- Subword motion -----
+  // {
+  //   "context": "VimControl && !menu",
+  //   "bindings": {
+  //     "w": "vim::NextSubwordStart",
+  //     "b": "vim::PreviousSubwordStart",
+  //     "e": "vim::NextSubwordEnd",
+  //     "g e": "vim::PreviousSubwordEnd"
+  //   }
+  // }
 ]
