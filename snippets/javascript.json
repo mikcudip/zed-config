@@ -1,0 +1,17 @@
+{
+  "React Arrow Function Component": {
+    "prefix": "rafc",
+    "body": [
+      "const ${1:ComponentName} = () => {",
+      "  return (",
+      "    <>",
+      "      <h1>$0</h1>",
+      "    </>",
+      "  );",
+      "};",
+      "",
+      "export default ${1:ComponentName};"
+    ],
+    "description": "Crea un componente funcional con arrow function en React"
+  }
+}

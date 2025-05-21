@@ -140,7 +140,8 @@
       "alt-h": "vim::Left",
       "alt-l": "vim::Right",
       "alt-j": "vim::Down",
-      "alt-k": "vim::Up"
+      "alt-k": "vim::Up",
+      "ctrl-s": "workspace::Save"
     }
   },
 
@@ -177,7 +178,8 @@
       "ctrl-l": "workspace::ActivatePaneRight",
       "ctrl-k": "workspace::ActivatePaneUp",
       "ctrl-j": "workspace::ActivatePaneDown",
-      "ctrl-t": "workspace::ToggleBottomDock"
+      "ctrl-t": "workspace::ToggleBottomDock",
+      "ctrl-q": "pane::CloseActiveItem"
     }
   },
 
