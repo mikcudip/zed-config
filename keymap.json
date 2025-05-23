@@ -2,7 +2,7 @@
   // ---- Disable keys globally ----
   {
     "bindings": {
-      "ctrl-q": null
+      "ctrl-q": "pane::CloseActiveItem"
     }
   },
   // ----- Normal & Visual Mode: General, Git, UI, etc. -----
@@ -52,7 +52,6 @@
       "space x x": "diagnostics::Deploy",
 
       // Buffers
-      "ctrl-q": "pane::CloseActiveItem",
       "space b d": "pane::CloseActiveItem",
       "space b o": "pane::CloseInactiveItems",
 
@@ -105,8 +104,7 @@
       "ctrl-l": "workspace::ActivatePaneRight",
       "ctrl-k": "workspace::ActivatePaneUp",
       "ctrl-j": "workspace::ActivatePaneDown",
-      "ctrl-t": "workspace::ToggleBottomDock",
-      "ctrl-q": "pane::CloseActiveItem"
+      "ctrl-t": "workspace::ToggleBottomDock"
     }
   },
 
