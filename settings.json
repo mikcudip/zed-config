@@ -4,8 +4,8 @@
   // === AGENTE (IA) ===
   "agent": {
     "default_model": {
-      "provider": "google",
-      "model": "gemini-1.5-flash"
+      "provider": "ollama",
+      "model": "deepseek-coder:latest"
     },
     "version": "2"
   },
@@ -44,6 +44,8 @@
   // === TIPOGRAFÍA Y GUÍAS ===
   "wrap_guides": [90],
   "show_wrap_guides": true,
+  "auto_signature_help": true,
+  "show_signature_help_after_edits": true,
   "indent_guides": {
     "enabled": true,
     "coloring": "indent_aware"
@@ -71,7 +73,7 @@
   // === FUNCIONALIDAD ===
   "features": {
     "edit_prediction_provider": "zed",
-    "copilot": false
+    "copilot": true
   },
 
   // === TELEMETRÍA ===
@@ -93,6 +95,7 @@
 
   // === PANELES (DOCKS) ===
   "project_panel": {
+    "hide_gitignore": false,
     "button": true,
     "dock": "right",
     "git_status": true

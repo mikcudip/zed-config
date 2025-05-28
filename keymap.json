@@ -55,6 +55,9 @@
       "space b d": "pane::CloseActiveItem",
       "space b o": "pane::CloseInactiveItems",
 
+      // Copy
+      "space c f": "editor::CopyFileNameWithoutExtension",
+
       // Guardar
       "ctrl-s": "workspace::Save",
       "space q": "pane::CloseActiveItem",
