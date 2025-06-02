@@ -1,6 +1,18 @@
 [
-  // ---- Disable keys globally ----
+  // ---- CLose keys globally ----
   {
+    "bindings": {
+      "ctrl-q": null
+    }
+  },
+  {
+    "context": "!Editor || !Terminal",
+    "bindings": {
+      "ctrl-q": "workspace::CloseActiveDock"
+    }
+  },
+  {
+    "context": "Editor || Terminal",
     "bindings": {
       "ctrl-q": "pane::CloseActiveItem"
     }
@@ -72,7 +84,8 @@
       "space f d": "editor::Format",
 
       // Terminal
-      "space t t": "terminal_panel::ToggleFocus"
+      "space t t": "terminal_panel::ToggleFocus",
+      "space t c": "workspace::NewCenterTerminal"
     }
   },
 

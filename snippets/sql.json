@@ -1,0 +1,98 @@
+{
+  "Select All": {
+    "prefix": "sf",
+    "body": ["SELECT * FROM ${1:table};$0"],
+    "description": "Select all rows from a table"
+  },
+  "Select Count": {
+    "prefix": "scount",
+    "body": ["SELECT COUNT(*) FROM ${1:table};$0"],
+    "description": "Select row count"
+  },
+  "Select with WHERE": {
+    "prefix": "swhere",
+    "body": ["SELECT * FROM ${1:table} WHERE ${2:column} = '${3:value}';$0"],
+    "description": "Select with condition"
+  },
+  "Select with GROUP BY": {
+    "prefix": "scgb",
+    "body": [
+      "SELECT ${1:column}, COUNT(*)",
+      "FROM ${2:table}",
+      "GROUP BY ${1};$0"
+    ],
+    "description": "Select count with GROUP BY"
+  },
+  "Delete with WHERE": {
+    "prefix": "dwhere",
+    "body": ["DELETE FROM ${1:table} WHERE ${2:column} = '${3:value}';$0"],
+    "description": "Delete rows with condition"
+  },
+  "Insert into Table": {
+    "prefix": "insert",
+    "body": [
+      "INSERT INTO ${1:table} (${2:col1}, ${3:col2})",
+      "VALUES ('${4:val1}', '${5:val2}');$0"
+    ],
+    "description": "Insert values into table"
+  },
+  "Update with WHERE": {
+    "prefix": "update",
+    "body": [
+      "UPDATE ${1:table}",
+      "SET ${2:col1} = '${3:val1}'",
+      "WHERE ${4:col2} = '${5:val2}';$0"
+    ],
+    "description": "Update rows with condition"
+  },
+  "Create Table Básico": {
+    "prefix": "ctable",
+    "body": [
+      "CREATE TABLE ${1:table} (",
+      "id INT PRIMARY KEY,",
+      "${2:col1} VARCHAR(255),",
+      "${3:created_at} TIMESTAMP DEFAULT CURRENT_TIMESTAMP",
+      ");$0"
+    ],
+    "description": "Basic CREATE TABLE"
+  },
+  "Truncate Table": {
+    "prefix": "truncate",
+    "body": ["TRUNCATE TABLE ${1:table};$0"],
+    "description": "Truncate a table"
+  },
+  "Select with JOIN": {
+    "prefix": "sjoin",
+    "body": [
+      "SELECT *",
+      "FROM ${1:table1} t1",
+      "JOIN ${2:table2} t2 ON t1.${3:fk} = t2.${4:pk}",
+      "WHERE t1.${5:col} = '${6:val}';$0"
+    ],
+    "description": "Join two tables with condition"
+  },
+  "Id for Foreign key": {
+    "prefix": "idf",
+    "body": ["id_${1:...} INT$0,"],
+    "description": "Id for Foreign key"
+  },
+  "Foreign key": {
+    "prefix": "fk",
+    "body": ["FOREIGN KEY (${1:...}) REFERENCES ${2:...} (${3:...})$0"],
+    "description": "Id for Foreign key"
+  },
+  "User key": {
+    "prefix": "ctuser",
+    "body": [
+      "CREATE TABLE users (",
+      "id INT PRIMARY KEY AUTO_INCREMENT,",
+      "firstname VARCHAR(50) NOT NULL,",
+      "lastname VARCHAR(50) NOT NULL,",
+      "email VARCHAR(50) NOT NULL UNIQUE,",
+      "password VARCHAR(100) NOT NULL,",
+      "created_at timestamp DEFAULT CURRENT_TIMESTAMP",
+      ");"
+    ],
+    "description": "Table for user"
+  }
+}
