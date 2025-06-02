@@ -90,7 +90,7 @@
       "lastname VARCHAR(50) NOT NULL,",
       "email VARCHAR(50) NOT NULL UNIQUE,",
       "password VARCHAR(100) NOT NULL,",
-      "created_at timestamp DEFAULT CURRENT_TIMESTAMP",
+      "created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP",
       ");"
     ],
     "description": "Table for user"
