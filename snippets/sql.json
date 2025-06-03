@@ -49,7 +49,7 @@
     "prefix": "ctable",
     "body": [
       "CREATE TABLE ${1:table} (",
-      "id INT PRIMARY KEY,",
+      "id INT PRIMARY KEY AUTO_INCREMENT,",
       "${2:col1} VARCHAR(255),",
       "${3:created_at} TIMESTAMP DEFAULT CURRENT_TIMESTAMP",
       ");$0"
@@ -72,12 +72,12 @@
     "description": "Join two tables with condition"
   },
   "Id for Foreign key": {
-    "prefix": "idf",
+    "prefix": "fid",
     "body": ["id_${1:...} INT$0,"],
     "description": "Id for Foreign key"
   },
   "Foreign key": {
-    "prefix": "fk",
+    "prefix": "foreign",
     "body": ["FOREIGN KEY (${1:...}) REFERENCES ${2:...} (${3:...})$0"],
     "description": "Id for Foreign key"
   },
