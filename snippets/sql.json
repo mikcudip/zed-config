@@ -73,7 +73,7 @@
   },
   "Id for Foreign key": {
     "prefix": "fid",
-    "body": ["id_${1:...} INT$0,"],
+    "body": ["${1:...}_id INT$0,"],
     "description": "Id for Foreign key"
   },
   "Foreign key": {
@@ -88,8 +88,15 @@
       "id INT PRIMARY KEY AUTO_INCREMENT,",
       "firstname VARCHAR(50) NOT NULL,",
       "lastname VARCHAR(50) NOT NULL,",
+      "phone VARCHAR(25) NULL,",
       "email VARCHAR(50) NOT NULL UNIQUE,",
       "password VARCHAR(100) NOT NULL,",
+      "password_changed_at VARCHAR(100) NOT NULL,",
+      "direction VARCHAR(100),",
+      "door varchar(2),",
+      "department varchar(2),",
+      "notes VARCHAR(100),",
+      "is_deactived BOOLEAN DEFAULT FALSE NOT NULL,",
       "created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP",
       ");"
     ],
