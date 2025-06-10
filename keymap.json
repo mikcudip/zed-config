@@ -120,7 +120,9 @@
       "ctrl-l": "workspace::ActivatePaneRight",
       "ctrl-k": "workspace::ActivatePaneUp",
       "ctrl-j": "workspace::ActivatePaneDown",
-      "ctrl-t": "workspace::ToggleBottomDock"
+      "ctrl-t": "workspace::ToggleBottomDock",
+      "alt-k": "terminal::ScrollLineUp",
+      "alt-j": "terminal::ScrollLineDown"
     }
   },
 
