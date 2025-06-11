@@ -122,7 +122,8 @@
       "ctrl-j": "workspace::ActivatePaneDown",
       "ctrl-t": "workspace::ToggleBottomDock",
       "alt-k": "terminal::ScrollLineUp",
-      "alt-j": "terminal::ScrollLineDown"
+      "alt-j": "terminal::ScrollLineDown",
+      "ctrl-shift-l": "terminal::Clear"
     }
   },
 
