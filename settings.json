@@ -192,6 +192,14 @@
         }
       },
       "language_servers": ["pyright", "ruff"]
+    },
+    "SQL": {
+      "formatter": {
+        "external": {
+          "command": "sql-formatter",
+          "arguments": ["--language", "mariadb"]
+        }
+      }
     }
   }
 }
