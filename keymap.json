@@ -145,7 +145,8 @@
       "u": "workspace::CopyPath",
       "i": "workspace::CopyRelativePath",
       "l": "project_panel::OpenPermanent",
-      "h": "project_panel::ToggleFocus",
+      "H": "project_panel::ToggleFocus",
+      "h": "project_panel::SelectParent",
       "q": "workspace::ToggleRightDock",
 
       // Navegación
