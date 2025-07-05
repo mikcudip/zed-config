@@ -1,5 +1,21 @@
 [
   {
+    "label": "Run File",
+    "command": "sh",
+    "args": [
+      "~/.config/zed/custom_runfile.sh",
+      "fileName=$ZED_FILENAME",
+      "fileNameWithoutExt=$ZED_STEM",
+      "dirName=$ZED_DIRNAME"
+    ],
+    "shell": {
+      "program": "/bin/zsh"
+    },
+    "show_summary": false,
+    "show_output": false,
+    "show_command": false
+  },
+  {
     "label": "Npm Dev",
     "command": "npm run $script",
     "env": { "script": "dev" },

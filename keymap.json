@@ -12,6 +12,12 @@
     }
   },
   {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-shift-enter": ["task::Spawn", { "task_name": "Run File" }]
+    }
+  },
+  {
     "context": "Editor || Terminal",
     "bindings": {
       "ctrl-q": "pane::CloseActiveItem"
