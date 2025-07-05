@@ -1,19 +1,43 @@
 [
   {
-    "label": "Run File",
+    "label": "Run Project",
     "command": "sh",
     "args": [
-      "~/.config/zed/custom_runfile.sh",
+      "~/.config/zed/runners/custom_runproject.sh",
+      "file=$ZED_FILE",
       "fileName=$ZED_FILENAME",
       "fileNameWithoutExt=$ZED_STEM",
-      "dirName=$ZED_DIRNAME"
+      "dirName=$ZED_DIRNAME",
+      "relativeFile=$ZED_RELATIVE_FILE",
+      "stem=$ZED_STEM",
+      "workspaceRoot=$ZED_WORKTREE_ROOT"
     ],
     "shell": {
       "program": "/bin/zsh"
     },
     "show_summary": false,
-    "show_output": false,
-    "show_command": false
+    "show_command": false,
+    "show_output": false
+  },
+  {
+    "label": "Run File",
+    "command": "sh",
+    "args": [
+      "~/.config/zed/runners/custom_runfile.sh",
+      "file=$ZED_FILE",
+      "fileName=$ZED_FILENAME",
+      "fileNameWithoutExt=$ZED_STEM",
+      "dirName=$ZED_DIRNAME",
+      "relativeFile=$ZED_RELATIVE_FILE",
+      "stem=$ZED_STEM",
+      "workspaceRoot=$ZED_WORKTREE_ROOT"
+    ],
+    "shell": {
+      "program": "/bin/zsh"
+    },
+    "show_summary": false,
+    "show_command": false,
+    "show_output": false
   },
   {
     "label": "Npm Dev",
@@ -24,9 +48,9 @@
     "reveal": "always",
     "hide": "never",
     "shell": "system",
-    "show_summary": true,
-    "show_output": true,
-    "tags": []
+    "show_summary": false,
+    "show_command": false,
+    "show_output": false
   },
   {
     "label": "Npm Build",
@@ -37,9 +61,9 @@
     "reveal": "always",
     "hide": "never",
     "shell": "system",
-    "show_summary": true,
-    "show_output": true,
-    "tags": []
+    "show_summary": false,
+    "show_command": false,
+    "show_output": false
   },
   {
     "label": "Maven Vanilla",
@@ -49,9 +73,9 @@
     "reveal": "always",
     "hide": "never",
     "shell": "system",
-    "show_summary": true,
-    "show_output": true,
-    "tags": []
+    "show_summary": false,
+    "show_command": false,
+    "show_output": false
   },
   {
     "label": "Maven Spring",
@@ -62,8 +86,8 @@
     "reveal": "always",
     "hide": "never",
     "shell": "system",
-    "show_summary": true,
-    "show_output": true,
-    "tags": []
+    "show_summary": false,
+    "show_command": false,
+    "show_output": false
   }
 ]

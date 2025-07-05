@@ -14,7 +14,8 @@
   {
     "context": "Editor",
     "bindings": {
-      "ctrl-shift-enter": ["task::Spawn", { "task_name": "Run File" }]
+      "ctrl-shift-enter": ["task::Spawn", { "task_name": "Run File" }],
+      "ctrl-alt-enter": ["task::Spawn", { "task_name": "Run Project" }]
     }
   },
   {
